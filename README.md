@@ -1,5 +1,3 @@
-# Site_PHP
+# PhpSite
 
-#HTML
-#CSS
-#JAVASCRIPT
+SiteusingPHP
