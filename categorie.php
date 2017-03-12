@@ -14,6 +14,7 @@ if (isset($_GET['cat']))
         <a href='product.php?id=".$row["id_products"]."'><img src='".$row[image]."'/></a>
         <div>$row[price] Lei</div>
         </div>";
+        
     }
 }
 else

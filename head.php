@@ -22,6 +22,17 @@
 		</ul>
 
 	</li>
-	<li><a href="#">About</a></li>
-	<li><a href="#">Contact Us</a></li>
+	<li><a href="">Tendinte</a>
+		<ul>
+			<li><a href="about.php">Noutati</a>
+			</ul>
+		</li>
+	<li><a href="">Contact</a>
+		<ul>
+			<li><a href="contact.php">Chisinau</a>
+			<li><a href="contact2.php">Bucuresti</a>
+			<li><a href="contact3.php">Kiev</a>
+		</ul>
+	</li>
+
 </ul>
