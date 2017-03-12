@@ -6,6 +6,7 @@
 <article class="article">
   <h1>Tehnologiile in 2017 </h1>
   <p>Etimologie. Termenul tehnologie provine din l.greacă: tekhnologia (tratare sau dizertație asupra unei arte, expunerea regulilor unei arte), format din : tekhnë (artă, meserie) + -logos (cuvânt). Referința la meserie implică aplicarea competențelor și cunoștințelor în practică. Semnificația originală în l.greacă a fost "discurs asupra artelor". În engleză a apărut în secolul 17, fiind utilizat pentru a semnifica o discuție numai asupra artelor aplicate. Termenul "arte" înseamnă aici producția de artefacte, nu numai "obiecte de artă", ci, mai general, produse. La începutul secolului 20, termenul tehnologie a inclus un domeniu din ce în ce mai amplu de mijloace, procese și idei, în afară de instrumente și mașini.</p>
+ 
 
   <h1>Descrierea</h1>
   <p>Tehnologia (engleză technology, franceză technologie) este ansamblul metodelor, proceselor, operațiilor făcute sau aplicate asupra materiilor prime, materialelor și datelor pentru realizarea unui anumit produs industrial sau comercial.</p>
