@@ -78,12 +78,17 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 </head>
 
 <body>
+
   <div class="login">
 	<h1>Login</h1>
     <form method="post" action="test.php">
     	<input type="text" name="user" placeholder="Username" required="required" />
         <input type="password" name="pass" placeholder="Password" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+        <button class="button green">
+	<div class="title">Adauga in cos</div>
+	<div class="price">0 lei</div>
+</button>
 
     </form>
 </div>

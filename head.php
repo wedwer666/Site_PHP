@@ -33,11 +33,15 @@
 			<li><a href="contact2.php">Bucuresti</a>
 			<li><a href="contact3.php">Kiev</a>
 		</ul>
+		</li>
+	<li><a href="">Cumpara</a>
+		<ul>
+			<li><a href="cumpara.php">Acum</a>
+		</ul>
 	</li>
 	<li><a href="">Logare</a>
 		<ul>
 			<li><a href="login_user.php">Datele user</a>
-		<!-- 	<li><a href="login_cu_privilegii.php">Datele useril -->
 			</ul>
 		</li>
 

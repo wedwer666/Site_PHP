@@ -28,5 +28,5 @@ if(isset($_POST['user'])&&isset($_POST['pass']))
 		}
 	}
 }
-mysqli_close($conn);
+// mysqli_close($conn);
 ?>

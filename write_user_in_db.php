@@ -8,7 +8,7 @@ $DB_PASS = "2SlVD5M62w";
 $conn = mysqli_connect($DB_CONN,$DB_USER,$DB_PASS,$DB_NAME);
 if(isset($_POST['user'])&&isset($_POST['pass']))
 {
-	if ($stmt =mysqli_prepare($conn,"INSERT INTO `users` (`id_user`, `username`, `password`, `id_member`) VALUES ('6', ".$_POST['user'].", ".$_POST['pass'].", '2')"))
+	if ($stmt =mysqli_prepare($conn,"INSERT INTO `users` (`username`, `password`) VALUES (? , ?)"))
 	{
 		$user = "NO USER";
 		mysqli_stmt_bind_param($stmt,"ss", $_POST['user'], $_POST['pass']);
