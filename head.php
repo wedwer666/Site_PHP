@@ -1,6 +1,6 @@
 <?php
 session_start();
-error_reporting(0);
+// error_reporting(0);
 $user_name = "";
 ?>
 <!DOCTYPE html>
@@ -48,8 +48,8 @@ $user_name = "";
 	<?php
 		if(intval($_SESSION['uuid']) > 0)
 		{
-			$sql = "SELECT username FROM users WHERE uuid = ".intval($_SESSION['uuid']);
-			$rs = mysqli_query ($conn , $sql);
+			$sql = "SELECT `username` FROM `users` WHERE `uuid` = ".intval($_SESSION['uuid']);
+			$rs = mysqli_query($conn, $sql);
 			if($row = mysqli_fetch_assoc($rs))
 			{
 				$user_name = $row['username'];
@@ -83,7 +83,7 @@ $user_name = "";
 <html>
 <head>
 
-<a href= "install.php">In</a>
+<!-- <a href= "install.php">In</a> -->
 
 </html>
 </head>

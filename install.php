@@ -1,16 +1,25 @@
 <?php
 include "db.php";
 
-$one ="CREATE VIEW up  AS SELECT id_products,name,image,price,`count`,user_product.id_up,user_product.id_user 
-FROM products JOIN user_product WHERE products.id_products = user_product.id_produs;";
-mysqli_query($conn, $one);
-
 mysqli_query($conn, "CREATE TABLE `category` (
   `id_cat` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `image` text NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;");
+
+$one ="CREATE VIEW up  AS SELECT id_products,name,image,price,`count`,user_product.id_up,user_product.id_user 
+FROM products JOIN user_product WHERE products.id_products = user_product.id_produs;";
+mysqli_query($conn, $one);
+
+$masa = "CREATE TABLE `user_product` ( 
+  `id_up` INT NOT NULL AUTO_INCREMENT , 
+  `id_produs` INT NOT NULL , 
+  `id_user` INT NOT NULL , 
+  `count` INT NOT NULL , 
+  PRIMARY KEY (`id_up`)) 
+ENGINE = InnoDB;";
+mysqli_query($conn, $masa);
 
 
 mysqli_query($conn, "INSERT INTO `category` (`id_cat`, `name`, `description`, `image`) VALUES
@@ -68,18 +77,6 @@ mysqli_query($conn, "INSERT INTO `products` (`id_products`, `name`, `image`, `de
 (13, 'Surface Pro 45', 'https://dri1.img.digitalrivercontent.net/Storefront/Company/msintl/images/English/en-INTL-Surface-Pro4-Refresh-CoreM-SU3-00001/en-INTL-XL-Surface-Pro4-Refresh-CoreM-SU3-00001-RM1-mnco.jpg', 'Laptop power and performance with 6th  Intel core processor\r\n12.3-inch high-resolution PixelSense display brings your work to life\r\nSurface Pen sold separately\r\nCompatible with Surface Dial', 20, 7000, 0, 5, '0000-00-00');");
 
 
-$five ="CREATE TABLE `up` (
-`id_products` int(11)
-,`name` varchar(255)
-,`image` text
-,`price` double
-,`count` int(11)
-,`id_up` int(11)
-,`id_user` int(11)
-);";
-mysqli_query($conn, $five);
-
-
 $six ="CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
@@ -88,7 +85,6 @@ $six ="CREATE TABLE `users` (
   `uuid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 mysqli_query($conn, $six);
-
 
 
 mysqli_query($conn, "INSERT INTO `users` (`id_user`, `username`, `password`, `id_member`, `uuid`) VALUES
