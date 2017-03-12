@@ -15,6 +15,3 @@
   
 </article>
 
-<?php
-  require("footer.php");
-?>

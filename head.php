@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 $user_name = "";
 ?>
 <!DOCTYPE html>
@@ -10,6 +11,7 @@ $user_name = "";
 </head>
 <body>
 <ul id="nav">
+
 	<li><a href="index.php">Home</a></li>
 	<li><a href="">Produsele</a>
 	
@@ -77,3 +79,11 @@ $user_name = "";
 			echo "<li><a href=\"login_user.php\">Logare</a></li>";
 	?>
 </ul>
+
+<html>
+<head>
+
+<a href= "install.php">In</a>
+
+</html>
+</head>
