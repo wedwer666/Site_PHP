@@ -6,7 +6,7 @@
 </head>
 <body>
 <ul id="nav">
-	<li><a href="">Home</a></li>
+	<li><a href="http://localhost:8080/SitePhp/">Home</a></li>
 	<li><a href="">Produsele</a>
 	
 		<ul>
@@ -34,5 +34,11 @@
 			<li><a href="contact3.php">Kiev</a>
 		</ul>
 	</li>
+	<li><a href="">Logare</a>
+		<ul>
+			<li><a href="login_user.php">Datele user</a>
+		<!-- 	<li><a href="login_cu_privilegii.php">Datele useril -->
+			</ul>
+		</li>
 
 </ul>

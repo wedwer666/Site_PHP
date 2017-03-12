@@ -8,7 +8,7 @@ $DB_PASS = "2SlVD5M62w";
 $conn = mysqli_connect($DB_CONN,$DB_USER,$DB_PASS,$DB_NAME);
 if(isset($_POST['user'])&&isset($_POST['pass']))
 {
-	if ($stmt =mysqli_prepare($conn,"SELECT `username` FROM `users` WHERE `username` = ? AND `password` = ?;"))
+	if ($stmt =mysqli_prepare($conn,"INSERT INTO `users` (`id_user`, `username`, `password`, `id_member`) VALUES ('6', ".$_POST['user'].", ".$_POST['pass'].", '2')"))
 	{
 		$user = "NO USER";
 		mysqli_stmt_bind_param($stmt,"ss", $_POST['user'], $_POST['pass']);
@@ -16,17 +16,17 @@ if(isset($_POST['user'])&&isset($_POST['pass']))
 		mysqli_stmt_bind_result($stmt,$user);
 		if(mysqli_stmt_fetch($stmt))
 		{
-			include("index.php");
+			echo "Create successfuly";
 		//	eval("header('Location: http://localhost:8080/SitePhp/')");
 			// echo $user;
 		}
 		else
 		{
-			include("login_error.php");
-			//header('Location: http://localhost:8080/SitePhp/');
-			// echo "ERROR";
+			echo "Error database";
 		}
 	}
 }
+else
+	echo "Error database";
 mysqli_close($conn);
 ?>
