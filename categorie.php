@@ -13,6 +13,7 @@ if (isset($_GET['cat']))
         <h1>".$row["name"]."</h1>
         <a href='product.php?id=".$row["id_products"]."'><img src='".$row[image]."'/></a>
         <div>$row[price] Lei</div>
+        <div><form action='add.php' method='post'/><input type='submit' value='Add'/><input type='hidden' name='idp' value='$row[id_products]'/></form>
         </div>";
         
     }

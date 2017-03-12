@@ -1,7 +1,3 @@
-<?php
-  require("head.php");
-?>
-
 <!DOCTYPE html>
 <html >
 <head>
@@ -85,9 +81,6 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
     	<input type="text" name="user" placeholder="Username" required="required" />
         <input type="password" name="pass" placeholder="Password" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
-        <button class="button green">
-	<div class="title">Adauga in cos</div>
-	<div class="price">0 lei</div>
 </button>
 
     </form>
@@ -97,7 +90,3 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 </body>
 </html>
-
-<?php
-  require("footer.php");
-?>

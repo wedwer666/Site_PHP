@@ -1,3 +1,7 @@
+<?php
+session_start();
+$user_name = "";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +10,7 @@
 </head>
 <body>
 <ul id="nav">
-	<li><a href="http://localhost:8080/SitePhp/">Home</a></li>
+	<li><a href="index.php">Home</a></li>
 	<li><a href="">Produsele</a>
 	
 		<ul>
@@ -38,11 +42,38 @@
 		<ul>
 			<li><a href="cumpara.php">Acum</a>
 		</ul>
-	</li>
-	<li><a href="">Logare</a>
-		<ul>
-			<li><a href="login_user.php">Datele user</a>
-			</ul>
-		</li>
+	</li>		
+	<?php
+		if(intval($_SESSION['uuid']) > 0)
+		{
+			$sql = "SELECT username FROM users WHERE uuid = ".intval($_SESSION['uuid']);
+			$rs = mysqli_query ($conn , $sql);
+			if($row = mysqli_fetch_assoc($rs))
+			{
+				$user_name = $row['username'];
+				echo "<li><a href=\"logout.php\">Logout From $user_name</a></li>";
+				$sum = 0;
+				$sql =  "SELECT price,`count` FROM up WHERE id_user = ".intval($_SESSION['uuid']);
+				$rs2 = mysqli_query ($conn , $sql);
+					echo "<li>";
+				while($r = mysqli_fetch_assoc($rs2))
+				{
+					try
+					{
+						$sum += $r['count']*$r['price'];
+					}
+					catch(Exception $ex)
+					{
 
+					}
+					//$sum+=floatval($r['price'])*intval($['count']);
+				}
+			echo "Total $sum lei.</li>";
+			}
+			else  
+				echo "<li><a href=\"login_user.php\">Logare</a></li>";
+		}
+		else
+			echo "<li><a href=\"login_user.php\">Logare</a></li>";
+	?>
 </ul>
