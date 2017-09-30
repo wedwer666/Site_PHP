@@ -1,4 +1,3 @@
 # PhpSite
 
-SiteusingPHP
-fIRST PUSH !!! 
+E-commerce Site using PHP
